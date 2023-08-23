@@ -17,6 +17,7 @@
                         <button id="search" onclick = "ShowUsers()">Recherchez la page</button>
                         <input type ="number" id="numberPageUsers" min="0" max=""/>
                     </li>
+                    <li> <button  id="table-users" onclick="createUserApiFetch()">Créer utilisateur</button> </li>
                            
                 </ul>
            
@@ -39,30 +40,23 @@
             <div id="table" class="invisible">
                 <div id="table-data">
                     tableau
-                </div>
-                <div>
-                    <div>
-                        <input id="Nom" placeholder="Nom" />
-                        <input id="Job" placeholder="Job" />
-                    </div>
-                    
-                    <div>
-                        <button onclick="createUserApiFetch()">Créer utilisateur</button>
-                        <button onclick="editUser()">Modifier utilisateur </button>
-                    
-                        <br/>
-                    
-                        <button onclick="deleteUser()">Supprimer</button>
-                    </div>
-                </div>  --> 
-                
-            
-            
-
-            </div>
-
-         
+                </div>--> 
+                         
         </div>  
+        <div class="table">
+                
+            <div>
+                <input id="Nom" placeholder="Nom" />
+                <input id="Job" placeholder="Job" />
+            </div>
+            
+           
+        </div>  
+        
+    
+    
+
+    </div>
 
     <script src="./ajax.js"></script>
         

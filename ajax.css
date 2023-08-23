@@ -2,7 +2,6 @@
   
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
 }
 
 body{
@@ -15,7 +14,7 @@ h1, h5{
     text-align: center;
     color: beige;
     text-shadow: 1px 1px 2px rgb(68, 21, 86);
-    }
+}
 
 .myPagination{
 
@@ -24,7 +23,6 @@ font-size: 1.2em;
 justify-content: center;
 align-items: center;
 }
-
 
 .btn-page{
     padding: 5px;
@@ -36,6 +34,7 @@ align-items: center;
     border-radius: 44px 33px 22px 11px/11px 22px 33px 44px;
     font-size: 1.1em;
 }
+
 .btn-page:hover{
     background-color: beige;
     color: #64396a;;
@@ -44,10 +43,7 @@ align-items: center;
 .btn-page.active{
     background-color:  #64396a6b;
     color: beige;
- }
-
-
-
+}
 
 .container{
     background-color: rgba(218, 218, 218, 0.363);
@@ -63,6 +59,8 @@ align-items: center;
     flex-wrap: wrap;
     border-bottom: 2px solid beige;  
     gap: 15px;
+    font-size: 1.2em ;
+    
 }
 
 li{
@@ -80,41 +78,50 @@ li:hover{
     box-shadow: 10px -3px 5px #64396a;
 }
 
-
-  #search{
+#search{
     font-size: 1.2rem;
     color: #64396a;
     background-color: inherit;
-    border: transparent;
+    border: none;
     text-align:center;
     margin: 1px;
     padding: 1px;
     transition: all 0.2s linear;
-  }
-  #search:hover {
+}
+
+#search:hover {
     border-bottom:3px solid #64396a;
     font-size: 1.3rem;
-    color: beige;
-   
-  }
+    color: beige; 
+}
+
 #numberPageUsers{
-    width:2.5em;
+    width:3vw;
     background-color: #5526cc39;
     font-weight: 700;
     font-size: large;
     color: #64396a;
     padding: 0px;
     text-align: center;
-  }
+}
+#table-users{
+  font-size: 1.2rem;
+  align-items: center;
+  background-color:inherit;
+  border: none;
+}
+#table-users:hover{
+  color:beige;
+}
+
+
  
 #catalogue-card ,#table{
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 1rem 5rem;
-    justify-content: space-around;
-    
-    
+    justify-content: space-around;      
 }
 
 .card{
@@ -138,11 +145,13 @@ li:hover{
     background-color: aquamarine;
     min-height: 90px;
 }
+
 .card-header{
     background-color: #64396a;
     border-bottom: 1px double beige;
     padding:0px;
 }
+
 h5{
     margin: 20px;   
     line-height: 1px;
@@ -151,44 +160,50 @@ h5{
 .card:hover {
    box-shadow: none;
 }
+
 .card-body{
     
     height: auto;
     align-self: center;
     display: inline-block;
     max-width: 100%;
-   
-
 }
+
 img{
     border-radius:50%;
     object-fit: cover;
     width: 200px;
     height: 200px;
     margin-top:0.2em;
-    transition: all 0.8s ease-in-out;
-    
+    transition: all 0.8s ease-in-out;  
 }
+
 img:hover{
     transform: scale(1.10);
     box-shadow: 10px -5px 5px  #64396a;
 }
+
 .card-footer{
    
     margin: 1em;
     text-align: center;
+    display: flex;
+    flex-basis:0;
+    justify-content: space-around;
 }
 
 #table{
     margin-top:-50px;
     justify-content: baseline;
 }
+
 #table-data{
     width: 60%;
     height: 300px;
     text-align: center;
     border:3px dotted #1a0821;
 }
+
 #table input{
     background-color: beige;
     margin-top: 5px;
@@ -198,18 +213,6 @@ img:hover{
     text-align: center;
     text-transform: uppercase;
     padding: 1px;
-    
-}
-
-.invisible {
-    visibility: hidden;
-    position: absolute;
-    top: -9999px;
-}
-
-.visible {
-    visibility: visible;
-    position: static;
 }
 
 @media (max-width:992px){
@@ -227,18 +230,48 @@ img:hover{
         margin-bottom: 0px;
         max-width: 200px;
     }
-    
+    li:hover{
+      border: none;
+      box-shadow: none;
+    }
     #table{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;        
     }
-
-   #numberPageUsers{
+     #numberPageUsers{
 margin-left: 13px;
-   }
+width: auto;
+    }
+     .card-footer{
+      flex-direction: column;
+     }
+}
 
-    
+.change{
+  border-radius: 100px;
+  border: 1px solid #64396a;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.rouge{
+  background-color: red;
+}
+.rouge:hover{
+  border:2px solid beige;
+  background-color: rgba(255, 0, 0, 0.564);
+}
+.orange{
+  background-color: orange;
+}
+.orange:hover{
+  border:2px solid beige;
+  background-color: rgba(211, 142, 14, 0.555);
 }
 
 /*Loader*/
