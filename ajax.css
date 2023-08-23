@@ -1,0 +1,332 @@
+*{
+  
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+body{
+    background-color: rgb(224, 171, 229); 
+    margin-left: 15px;
+    padding: 5px 20px;
+}
+
+h1, h5{
+    text-align: center;
+    color: beige;
+    text-shadow: 1px 1px 2px rgb(68, 21, 86);
+    }
+
+.myPagination{
+
+text-align: center;
+font-size: 1.2em;
+justify-content: center;
+align-items: center;
+}
+
+
+.btn-page{
+    padding: 5px;
+    margin:10px;
+    border: #5526cc;
+    background-color: #64396a;
+    color: beige;
+    width: 1em;
+    border-radius: 44px 33px 22px 11px/11px 22px 33px 44px;
+    font-size: 1.1em;
+}
+.btn-page:hover{
+    background-color: beige;
+    color: #64396a;;
+}
+
+.btn-page.active{
+    background-color:  #64396a6b;
+    color: beige;
+ }
+
+
+
+
+.container{
+    background-color: rgba(218, 218, 218, 0.363);
+    border-radius: 0.6rem 0.6rem 0 0;
+    border: 1px solid rgba(214, 214, 214, 0.81);
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    min-height: 794px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid beige;  
+    gap: 15px;
+}
+
+li{
+ margin-bottom: -1px;
+ border-top-left-radius: 0.25rem;
+ border-top-right-radius: 0.25rem;
+ display: flex;
+ justify-content: space-around;
+ width: 300px;
+ padding: 10px;
+}
+
+li:hover{
+    border: 1px solid beige;
+    box-shadow: 10px -3px 5px #64396a;
+}
+
+
+  #search{
+    font-size: 1.2rem;
+    color: #64396a;
+    background-color: inherit;
+    border: transparent;
+    text-align:center;
+    margin: 1px;
+    padding: 1px;
+    transition: all 0.2s linear;
+  }
+  #search:hover {
+    border-bottom:3px solid #64396a;
+    font-size: 1.3rem;
+    color: beige;
+   
+  }
+#numberPageUsers{
+    width:2.5em;
+    background-color: #5526cc39;
+    font-weight: 700;
+    font-size: large;
+    color: #64396a;
+    padding: 0px;
+    text-align: center;
+  }
+ 
+#catalogue-card ,#table{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 5rem;
+    justify-content: space-around;
+    
+    
+}
+
+.card{
+    box-shadow: 10px 5px 5px #64396a;
+    max-width: 300px;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.4s ease-out;
+    background-color:rgb(224, 200, 226);
+    border: 1px solid beige;
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    align-self: center;
+    padding: 0px;
+    margin-right: 2rem;
+}
+
+.card:nth-child(2n+1){
+    background-color: aquamarine;
+    min-height: 90px;
+}
+.card-header{
+    background-color: #64396a;
+    border-bottom: 1px double beige;
+    padding:0px;
+}
+h5{
+    margin: 20px;   
+    line-height: 1px;
+}
+
+.card:hover {
+   box-shadow: none;
+}
+.card-body{
+    
+    height: auto;
+    align-self: center;
+    display: inline-block;
+    max-width: 100%;
+   
+
+}
+img{
+    border-radius:50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin-top:0.2em;
+    transition: all 0.8s ease-in-out;
+    
+}
+img:hover{
+    transform: scale(1.10);
+    box-shadow: 10px -5px 5px  #64396a;
+}
+.card-footer{
+   
+    margin: 1em;
+    text-align: center;
+}
+
+#table{
+    margin-top:-50px;
+    justify-content: baseline;
+}
+#table-data{
+    width: 60%;
+    height: 300px;
+    text-align: center;
+    border:3px dotted #1a0821;
+}
+#table input{
+    background-color: beige;
+    margin-top: 5px;
+    max-height: 30px;
+    align-items: center;
+    font-size: medium;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1px;
+    
+}
+
+.invisible {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+.visible {
+    visibility: visible;
+    position: static;
+}
+
+@media (max-width:992px){
+  
+   #table input{
+    background-color: beige;
+    margin-top: 10px;
+    margin-right: 12px;
+    }
+    .menu{
+        border-bottom: 4px solid beige;
+              
+    }
+    li{
+        margin-bottom: 0px;
+        max-width: 200px;
+    }
+    
+    #table{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;        
+    }
+
+   #numberPageUsers{
+margin-left: 13px;
+   }
+
+    
+}
+
+/*Loader*/
+#loader{
+    text-align: center;
+    flex: content;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+    background-color: black;
+}
+
+
+lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
